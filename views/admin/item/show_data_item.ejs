@@ -1,0 +1,49 @@
+<div class="tab-pane fade show active" id="showData" role="tabpanel" aria-labelledby="showData-tab">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Nama Tempat</th>
+                            <th>Harga</th>
+                            <th>Kota</th>
+                            <th>Negara</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% item.map((i, index) => { %>
+                        <tr>
+                            <td><%= index + 1 %></td>
+                            <td><%= i.title %></td>
+                            <td>$ <%= i.price %></td>
+                            <td><%= i.city %></td>
+                            <td><%= i.country %></td>
+                            <td>
+                                <form action="/admin/item/<%= i._id %>?_method=DELETE" method="post">
+                                    <a href="/admin/item/show-image/<%= i._id %>" class="btn btn-info btn-sm btn-circle">
+                                        <i class="fas fa-image"></i>
+                                    </a>
+                                    <a href="/admin/item/<%= i._id %>" class="btn btn-warning btn-sm btn-circle text-dark button-update">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button type="submit" class="btn btn-danger btn-sm btn-circle button-delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                    <a href="/admin/item/detail-item/<%= i._id %>" class="btn btn-success btn-sm btn-circle">
+                                        <i class="fas fa-plus"></i>
+                                    </a>
+                                </form>
+                            </td>
+                        </tr>
+                        <% }); %>       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+

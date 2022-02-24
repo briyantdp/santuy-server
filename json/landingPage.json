@@ -1,0 +1,130 @@
+{
+  "hero": {
+    "travelers": 30000,
+    "cities": 2000,
+    "spots": 1000
+  },
+  "recommended": [
+    {
+      "_id": "1",
+      "name": "Villa Cidadas",
+      "type": "Apartment",
+      "imageUrl": "images/img-recommended1.jpeg",
+      "country": "Indonesia",
+      "city": "Bogor",
+      "price": "100",
+      "unit": "night"
+    },
+    {
+      "_id": "2",
+      "name": "Wisnu Village",
+      "type": "Hotel",
+      "imageUrl": "images/img-recommended2.jpeg",
+      "country": "Indonesia",
+      "city": "Bali",
+      "price": "60",
+      "unit": "night"
+    },
+    {
+      "_id": "3",
+      "name": "Garuda Park",
+      "type": "Rumah",
+      "imageUrl": "images/img-recommended3.jpeg",
+      "country": "Indonesia",
+      "city": "Bali",
+      "price": "130",
+      "unit": "night"
+    },
+    {
+      "_id": "4",
+      "name": "Anggrek Hotel",
+      "type": "Apartment",
+      "imageUrl": "images/img-recommended4.jpeg",
+      "country": "Indonesia",
+      "city": "Bogor",
+      "price": "150",
+      "unit": "night"
+    },
+    {
+      "_id": "5",
+      "name": "Water Land",
+      "type": "Apartment",
+      "imageUrl": "images/img-recommended5.jpeg",
+      "country": "Indonesia",
+      "city": "Yogyakarta",
+      "price": "40",
+      "unit": "night"
+    }
+  ],
+  "special": [
+    {
+      "_id": "1",
+      "name": "Kebun Park",
+      "type": "Apartment",
+      "imageUrl": "images/special-offers/img-special1.jpeg",
+      "country": "Indonesia",
+      "city": "Tangerang",
+      "price": "80",
+      "unit": "night"
+    },
+    {
+      "_id": "2",
+      "name": "Village Cidadas",
+      "type": "Hotel",
+      "imageUrl": "images/special-offers/img-special2.jpeg",
+      "country": "Indonesia",
+      "city": "Bogor",
+      "price": "52",
+      "unit": "night"
+    },
+    {
+      "_id": "3",
+      "name": "Water Land",
+      "type": "Rumah",
+      "imageUrl": "images/special-offers/img-special3.jpeg",
+      "country": "Indonesia",
+      "city": "Yogyakarta",
+      "price": "80",
+      "unit": "night"
+    },
+    {
+      "_id": "4",
+      "name": "Wisnu Village",
+      "type": "Apartment",
+      "imageUrl": "images/special-offers/img-special4.jpeg",
+      "country": "Indonesia",
+      "city": "Bali",
+      "price": "80",
+      "unit": "night"
+    },
+    {
+      "_id": "5",
+      "name": "Garuda Park",
+      "type": "Apartment",
+      "imageUrl": "images/special-offers/img-special5.jpeg",
+      "country": "Indonesia",
+      "city": "Bali",
+      "price": "80",
+      "unit": "night"
+    },
+    {
+      "_id": "6",
+      "name": "Anggrek Hotel",
+      "type": "Apartment",
+      "imageUrl": "images/special-offers/img-special6.jpeg",
+      "country": "Indonesia",
+      "city": "Malang",
+      "price": "80",
+      "unit": "night"
+    }
+  ],
+  "testimonial": {
+    "_id": "1",
+    "imageUrl": "images/testimonial/testimonial.jpeg",
+    "name": "Happy Family",
+    "rate": 4.55,
+    "content": "What a great trip with my family and I should try again next time soon ...",
+    "familyName": "Bryant Dawson Priyantoro",
+    "familyOccupation": "Front End Developer"
+  }
+}

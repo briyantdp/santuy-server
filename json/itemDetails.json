@@ -1,0 +1,147 @@
+{
+  "_id": "asd1293uasdads1",
+  "name": "Village Cidadas",
+  "type": "Hotel",
+  "imageUrl": [
+    {
+      "_id": "asd1293uasdads1",
+      "url": "/images/details/img-detail1.jpeg"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "url": "/images/details/img-detail2.jpeg"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "url": "/images/details/img-detail3.jpeg"
+    }
+  ],
+  "country": "Indonesia",
+  "city": "Bogor",
+  "price": "280",
+  "unit": "night",
+  "isPopular": true,
+  "hasBackyard": true,
+  "description": "<p>Minimal techno is a minimalist subgenre of techno music. It ischaracterized by a stripped-down aesthetic that exploits the use ofrepetition and understated development. Minimal techno is thought tohave been originally developed in the early 1990s by Detroit-basedproducers Robert Hood and Daniel Bell.</p><p>Such trends saw the demise of the soul-infused techno that typified theoriginal Detroit sound. Robert Hood has noted that he and Daniel Bellboth realized something was missing from techno in the post-rave era.</p><p>Design is a plan or specification for the construction of an object orsystem or for the implementation of an activity or process, or theresult of that plan or specification in the form of a prototype, productor process. The national agency for design: enabling Singapore to usedesign for economic growth and to make lives better.</p>",
+  "features": [
+    {
+      "_id": "asd1293uasdads1",
+      "qty": "3",
+      "name": "bedroom",
+      "imageUrl": "/icons/ic-bedroom.svg"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "qty": "1",
+      "name": "living room",
+      "imageUrl": "/icons/ic-livingroom.svg"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "qty": "2",
+      "name": "bath room",
+      "imageUrl": "/icons/ic-bathroom.svg"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "qty": "1",
+      "name": "dining room",
+      "imageUrl": "/icons/ic-diningroom.svg"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "qty": "10",
+      "name": "mbps",
+      "imageUrl": "/icons/ic-wifi.svg"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "qty": "4",
+      "name": "units ready",
+      "imageUrl": "/icons/ic-ac.svg"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "qty": "1",
+      "name": "television",
+      "imageUrl": "/icons/ic-television.svg"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "qty": "2",
+      "name": "refrigerator",
+      "imageUrl": "/icons/ic-refrigerator.svg"
+    }
+  ],
+  "similar": [
+    {
+      "_id": "asd1293uasdads1",
+      "name": "Kebun Park",
+      "type": "Apartment",
+      "imageUrl": "/images/special-offers/img-special1.jpeg",
+      "country": "Indonesia",
+      "city": "Tangerang",
+      "price": "80",
+      "unit": "night"
+    },
+    {
+      "_id": "asd1293uasdads2",
+      "name": "Village Cidadas",
+      "type": "Hotel",
+      "imageUrl": "/images/special-offers/img-special2.jpeg",
+      "country": "Indonesia",
+      "city": "Bogor",
+      "price": "52",
+      "unit": "night"
+    },
+    {
+      "_id": "asd1293uasdads3",
+      "name": "Water Land",
+      "type": "Rumah",
+      "imageUrl": "/images/special-offers/img-special3.jpeg",
+      "country": "Indonesia",
+      "city": "Yogyakarta",
+      "price": "80",
+      "unit": "night"
+    },
+    {
+      "_id": "asd1293uasdads4",
+      "name": "Wisnu Village",
+      "type": "Apartment",
+      "imageUrl": "/images/special-offers/img-special4.jpeg",
+      "country": "Indonesia",
+      "city": "Bali",
+      "price": "80",
+      "unit": "night"
+    },
+    {
+      "_id": "asd1293uasdads5",
+      "name": "Garuda Park",
+      "type": "Apartment",
+      "imageUrl": "/images/special-offers/img-special5.jpeg",
+      "country": "Indonesia",
+      "city": "Bali",
+      "price": "80",
+      "unit": "night"
+    },
+    {
+      "_id": "asd1293uasdads5",
+      "name": "Anggrek Hotel",
+      "type": "Apartment",
+      "imageUrl": "/images/special-offers/img-special6.jpeg",
+      "country": "Indonesia",
+      "city": "Malang",
+      "price": "80",
+      "unit": "night"
+    }
+  ],
+  "testimonial": {
+    "_id": "asd1293uasdads1",
+    "imageUrl": "/images/testimonial/testimonial.jpeg",
+    "name": "Happy Family",
+    "rate": 4,
+    "content": "What a great trip with my family and I should try again next time soon ...",
+    "familyName": "Bryant Dawson Priyantoro",
+    "familyOccupation": "Front End Developer"
+  }
+}

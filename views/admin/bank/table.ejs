@@ -1,0 +1,49 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary button-create" data-toggle="modal" data-target="#addModal">
+            <i class="fas fa-plus mr-2"></i>
+            Tambah Data
+        </button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Nama Bank</th>
+                        <th>Nomor Rekening</th>
+                        <th>Nama Pemilik Rekening</th>
+                        <th>Logo Bank</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% bank.map((b, i) => { %>
+                        <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= b.bankName %></td>
+                            <td><%= b.bankNumber %></td>
+                            <td><%= b.accountHolder %></td>
+                            <td>
+                                <img src="http://localhost:3000/<%= b.imageUrl %>" alt="imageUrl" width="100"/>
+                            </td>
+                            <td>
+                                <form action="/admin/bank/<%= b._id %>?_method=DELETE" method="post">
+                                    <a href="javascript:void()" class="btn btn-warning btn-sm text-dark button-update"
+                                    data-id="<%= b._id %>" data-bankname="<%=b.bankName %>" data-banknumber="<%=b.bankNumber %>" data-accountholder="<%=b.accountHolder %>">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button type="submit" class="btn btn-danger btn-sm button-delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        <% }); %>       
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

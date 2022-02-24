@@ -1,0 +1,38 @@
+<div class="tab-pane fade mt-3" id="addData" role="tabpanel" aria-labelledby="addData-tab">
+    <form action="/admin/item" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">Nama Tempat</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Masukkan nama tempat" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Gambar</label>
+                <input type="file" class="form-control py-1" id="image" name="image" multiple required>
+            </div>
+            <div class="form-group">
+                <label for="category">Kategori</label>
+                <select class="form-control" name="categoryId">
+                    <option value="">--- Kategori ---</option>
+                    <% category.map(c => { %>
+                    <option value="<%= c._id %>"><%= c.name %></option>
+                    <% }); %>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="price">Harga</label>
+                <input type="number" class="form-control" id="price" name="price" placeholder="Masukkan harga" required>
+            </div>
+            <div class="form-group">
+                <label for="city">Kota</label>
+                <input type="text" class="form-control" id="city" name="city" placeholder="Masukkan nama kota" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Negara</label>
+                <input type="text" class="form-control" id="country" name="country" placeholder="Masukkan nama negara" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Deskripsi</label>
+                <textarea class="form-control" name="description" id="description" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Tambah Data</button>
+    </form>
+</div>

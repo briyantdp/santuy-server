@@ -1,0 +1,44 @@
+        <!-- Modal -->
+        <div class="modal fade" id="editModalSimilarRooms" tabindex="-1" role="dialog" aria-labelledby="editModalSimilarRoomsLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalSimilarRoomsLabel">Ubah Data Kamar Sejenis</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="/admin/item/detail-item/<%= itemId %>/similar-rooms?_method=PUT" method="post" enctype="multipart/form-data">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="title">Nama Lokasi</label>
+                            <input type="text" class="form-control title" id="title" name="title" placeholder="Masukkan nama lokasi" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Gambar</label>
+                            <input type="file" class="form-control" id="image" name="image">
+                            <span>Silahkan ganti gambar</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Harga</label>
+                            <input type="text" class="form-control price" id="price" name="price" placeholder="Masukkan harga" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Kota</label>
+                            <input type="text" class="form-control city" id="city" name="city" placeholder="Masukkan nama kota" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Negara</label>
+                            <input type="text" class="form-control country" id="country" name="country" placeholder="Masukkan nama negara" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" class="form-control id" id="id" name="id">
+                        <input type="hidden" class="form-control" value="<%= itemId %>" name="itemId">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary">Ubah Data</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>

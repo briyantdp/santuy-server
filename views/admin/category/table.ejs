@@ -1,0 +1,41 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary button-create" data-toggle="modal" data-target="#addModal">
+            <i class="fas fa-plus mr-2"></i>
+            Tambah Data
+        </button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Nama</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% category.map((c, i) => { %>
+                    <tr>
+                        <td><%= i + 1 %></td>
+                        <td><%= c.name %></td>
+                        <td>
+                            <form action="/admin/category/<%= c._id %>?_method=DELETE" method="post">
+                                <a href="javascript:void()" class="btn btn-warning btn-sm text-dark button-update"
+                                data-id="<%= c._id %>" data-name="<%= c.name %>" >
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <button type="submit" class="btn btn-danger btn-sm button-delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% }); %>       
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

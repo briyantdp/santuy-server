@@ -1,0 +1,67 @@
+<div class="tab-pane fade show active" id="showFacilities" role="tabpanel" aria-labelledby="showFacilities-tab">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-5">
+                    <form action="/admin/item/detail-item/<%= itemId %>/facilities" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Fasilitas</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan fasilitas" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Gambar</label>
+                            <input type="file" class="form-control py-1" id="image" name="image" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="qty">Jumlah</label>
+                            <input type="number" class="form-control" id="qty" name="qty" placeholder="Masukkan jumlah fasilitas" required>
+                        </div>
+                        <input type="hidden" class="form-control" id="itemId" name="itemId" value="<%= itemId %>" required>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                </form>
+                </div>
+                <div class="col-md-7">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTableFacilities" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Fasilitas</th>
+                                        <th>Gambar</th>
+                                        <th>Jumlah</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% facilities.map((f, i) => { %>
+                                        <tr>
+                                            <td><%= i + 1 %></td>
+                                            <td><%= f.name %></td>
+                                            <td>
+                                                <img src="http://localhost:3000/<%= f.imageUrl %>" alt="imageUrl" width="50"/>
+                                            </td>
+                                            <td><%= f.qty %></td>
+                                            <td>
+                                                <form action="/admin/item/detail-item/<%= itemId %>/facilities/<%= f._id %>?_method=DELETE" method="post">
+                                                    <a href="javascript:void(0);" class="btn btn-warning btn-sm text-dark button-update"
+                                                    data-id="<%= f._id %>" data-name="<%=f.name %>" data-qty="<%=f.qty %>"
+                                                    >
+                                                        <i class="fas fa-edit"></i>
+                                                    </a>
+                                                    <button type="submit" class="btn btn-danger btn-sm button-delete">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <% }); %> 
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

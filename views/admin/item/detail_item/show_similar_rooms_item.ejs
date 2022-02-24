@@ -1,0 +1,78 @@
+<div class="tab-pane fade show" id="showSimilarRooms" role="tabpanel" aria-labelledby="showSimilarRooms-tab">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <form action="/admin/item/detail-item/<%= itemId %>/similar-rooms" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="title">Nama Lokasi</label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Masukkan nama lokasi" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Gambar</label>
+                            <input type="file" class="form-control py-1" id="image" name="image" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Harga</label>
+                            <input type="number" class="form-control" id="price" name="price" placeholder="Masukkan harga" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Kota</label>
+                            <input type="text" class="form-control" id="city" name="city" placeholder="Masukkan nama kota" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Negara</label>
+                            <input type="text" class="form-control" id="country" name="country" placeholder="Masukkan nama negara" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                </form>
+                </div>
+                <div class="col-md-8">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTableSimilarRooms" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Nama Tempat</th>
+                                        <th>Gambar</th>
+                                        <th>Harga</th>
+                                        <th>Kota</th>
+                                        <th>Negara</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% similarRooms.map((s, i) => { %>
+                                        <tr>
+                                            <td><%= i + 1 %></td>
+                                            <td><%= s.title %></td>
+                                            <td>
+                                                <img src="http://localhost:3000/<%= s.imageUrl %>" alt="imageUrl" width="100"/>
+                                            </td>
+                                            <td><%= s.price %></td>
+                                            <td><%= s.city %></td>
+                                            <td><%= s.country %></td>
+                                            <td>
+                                                <form action="/admin/item/detail-item/<%= itemId %>/similar-rooms/<%= s._id %>?_method=DELETE" method="post">
+                                                    <a href="javascript:void(0);" class="btn btn-warning btn-sm text-dark button-update"
+                                                    data-id="<%= s._id %>" data-title="<%=s.title %>" data-price="<%=s.price %>" data-city="<%=s.city %>" data-country="<%=s.country %>"
+                                                    >
+                                                        <i class="fas fa-edit"></i>
+                                                    </a>
+                                                    <button type="submit" class="btn btn-danger btn-sm button-delete">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <% }); %>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
