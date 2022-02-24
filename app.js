@@ -8,7 +8,7 @@ const methodOverride = require("method-override");
 const flash = require('connect-flash');
 const session = require('express-session')
 
-mongoose.connect('mongodb://localhost:27017/db_santuy', {  
+mongoose.connect('mongodb+srv://bryant:santuy@cluster0.uxdim.mongodb.net/db_santuy?retryWrites=true&w=majority', {  
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
