@@ -41,10 +41,6 @@ const bookingSchema = new mongoose.Schema({
     type: ObjectId,
     ref: "Customer",
   },
-  bankId: {
-    type: ObjectId,
-    ref: "Bank",
-  },
   payments : {
     proofPayment: {
       type: String,

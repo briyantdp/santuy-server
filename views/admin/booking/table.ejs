@@ -23,7 +23,7 @@
                             <td><%= b.bookingStartDate.toLocaleString().split(",")[0] %> s/d <%= b.bookingEndDate.toLocaleString().split(",")[0] %></td>
                             <td><%= b.itemId.title %></td>
                             <td><%= b.customerId.firstName %> <%= b.customerId.lastName %></td>
-                            <td><%= b.bankId.bankName %></td>
+                            <td><%= b.payments.bankFrom %></td>
                             <td><%= b.payments.status %></td>
                             <td>
                                     <a href="/admin/booking/<%= b._id %>" class="btn btn-success btn-sm button-update">

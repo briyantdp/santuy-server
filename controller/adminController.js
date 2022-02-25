@@ -518,7 +518,7 @@ module.exports = {
     },
     viewBooking : async (req, res) => {
         try {
-            const booking = await Booking.find().populate("customerId").populate("bankId");
+            const booking = await Booking.find().populate("customerId")
             const title = "Santuy | Booking";
             res.render("admin/booking/view_booking", {booking, title, users: req.session.users});
         } catch (error) {
@@ -528,7 +528,7 @@ module.exports = {
     viewDetailBooking : async (req, res) => {
         const {id} = req.params;
         try {
-            const booking = await Booking.findOne({_id : id}).populate("customerId").populate("bankId");
+            const booking = await Booking.findOne({_id : id}).populate("customerId")
             const alertMessage = req.flash("alertMessage");
             const alertStatus = req.flash("alertStatus");
             const alert = {message : alertMessage, status : alertStatus};

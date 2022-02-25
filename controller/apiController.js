@@ -107,7 +107,6 @@ module.exports = {
                 lastName,
                 email,
                 phone,
-                bankId,
                 bankFrom,
                 accountHolder,
             } = req.body;
@@ -125,7 +124,6 @@ module.exports = {
                 lastName === undefined ||
                 email === undefined ||
                 phone === undefined ||
-                bankId === undefined ||
                 bankFrom === undefined ||
                 accountHolder === undefined
                 ) {
@@ -151,8 +149,6 @@ module.exports = {
                 phone
             });
 
-            const bank = await Bank.findOne({_id : bankId});
-
             const newBooking = {
                 bookingStartDate,
                 bookingEndDate,
@@ -165,11 +161,10 @@ module.exports = {
                 },
                 totalPrice : totalPrice += tax,
                 customerId : customer._id,
-                bankId : bank._id,
                 payments : {
                     proofPayment: `images/${req.file.filename}`,
-                    bankFrom ,
-                    accountHolder ,
+                    bankFrom,
+                    accountHolder,
                     status: "Proses",
                 } 
             }

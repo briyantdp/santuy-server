@@ -994,7 +994,6 @@ var data = [
         },
         totalPrice: 300,
         customerId: mongoose.Types.ObjectId('5e96cbe292b97300fc903333'),
-        bankId: mongoose.Types.ObjectId('5e96cbe292b97300fc903323'),
         payments: {
           proofPayment: 'images/buktibayar.jpeg',
           bankFrom: 'BCA',

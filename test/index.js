@@ -62,7 +62,6 @@ describe('API Endpoint Testing', () => {
         lastName : 'Dawson',
         email : 'bryantdp@gmail.com',
         phone : '290329032930',
-        bankId : '5e96cbe292b97300fc903323',
         bankFrom : 'Mandiri',
         accountHolder : 'Bryant',
     }
@@ -78,7 +77,6 @@ describe('API Endpoint Testing', () => {
         .field('lastName', dataSample.lastName)
         .field('email', dataSample.email)
         .field('phone', dataSample.phone)
-        .field('bankId', dataSample.bankId)
         .field('bankFrom', dataSample.bankFrom)
         .field('accountHolder', dataSample.accountHolder)
         .attach('image', fs.readFileSync(dataSample.image), 'buktibayar.jpeg')
@@ -86,7 +84,7 @@ describe('API Endpoint Testing', () => {
             expect(err).to.be.null
             expect(res).to.have.status(201)
             expect(res).to.be.an('object')
-            expect(res.body).to.have.all.keys('payments', '_id', 'bookingStartDate', 'bookingEndDate', 'invoice', 'itemId', 'totalPrice', 'customerId', 'bankId', '__v')
+            expect(res.body).to.have.all.keys('payments', '_id', 'bookingStartDate', 'bookingEndDate', 'invoice', 'itemId', 'totalPrice', 'customerId', '__v')
             expect(res.body.payments).to.have.all.keys('status', 'proofPayment', 'bankFrom', 'accountHolder')
             expect(res.body.itemId).to.have.all.keys('_id', 'title', 'price', 'duration')
             done()
