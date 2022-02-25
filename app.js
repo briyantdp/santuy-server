@@ -35,8 +35,7 @@ app.use(session({
   saveUninitialized: true,
   cookie: { 
     maxAge : 60000,
-    sameSite : "none",
-    secure : true
+    sameSite : "lax",
   }
 }));
 app.use(flash());
@@ -49,9 +48,10 @@ app.use(
   "/sb-admin-2",
   express.static(path.join(__dirname, "node_modules/startbootstrap-sb-admin-2"))
 );
-app.use(cors());
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+
+app.use(cors());
 
 // Endpoint admin
 app.use("/admin", adminRouter);
