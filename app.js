@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const flash = require('connect-flash');
 const session = require('express-session')
+const cors = require('cors');
 
 mongoose.connect('mongodb+srv://bryant:santuy@cluster0.uxdim.mongodb.net/db_santuy?retryWrites=true&w=majority', {  
   useNewUrlParser: true,
@@ -44,6 +45,7 @@ app.use(
   "/sb-admin-2",
   express.static(path.join(__dirname, "node_modules/startbootstrap-sb-admin-2"))
 );
+app.use(cors());
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
