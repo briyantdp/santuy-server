@@ -40,7 +40,7 @@ module.exports = {
         // GET Testimonial
         const testimonial = {
             "_id": "1",
-            "imageUrl": "images/testimonial/testimonial.jpeg",
+            "imageUrl": "images/testimonial1.jpg",
             "name": "Happy Family",
             "rate": 4.55,
             "content": "What a great trip with my family and I should try again next time soon ...",
@@ -75,7 +75,7 @@ module.exports = {
             // GET Testimonial
             const testimonial = {
                 "_id": "1",
-                "imageUrl": "images/testimonial/testimonial.jpeg",
+                "imageUrl": "images/testimonial1.jpg",
                 "name": "Happy Family",
                 "rate": 4.55,
                 "content": "What a great trip with my family and I should try again next time soon ...",
